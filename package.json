@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-css-courses",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss-cli build ./css/tailwind.css -o ./dist/tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss-cli": "^0.1.2"
+  }
+}
