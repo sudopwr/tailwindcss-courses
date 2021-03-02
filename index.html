@@ -1,11 +1,75 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="./dist/tailwind.css" rel="stylesheet" />
 </head>
-<body>
+
+<body class="bg-gray-100">
+  <nav class="bg-blue-200">
+    <div class="hidden md:block">
+      <div class="flex items-center justify-between h-24">
+        <div class="grid grid-cols-3 lg:gap-x-4 md:gap-x-3 ml-4">
+          <a href="#">Home</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <div>
+          <img src="images/new-sudo.png" class="h-20 w-20" />
+        </div>
+
+        <div class="flex space-x-5 mr-4">
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="block md:hidden">
+      <div class="flex items-center justify-between h-24">
+        <div class="ml-4">
+          <img src="images/new-sudo.png" class="h-20 w-20" />
+        </div>
+
+        <div class="mr-4">
+          <button onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        </div>
+      </div>
+
+      <div class="hidden" id="mobileMenuContent">
+        <div class="flex flex-col text-xl ml-4">
+          <a href="#" class="p-3">Home</a>
+          <a href="#" class="p-3">Blog</a>
+          <a href="#" class="p-3">Contact</a>
+        </div>
+
+        <div class="flex ml-4 gap-x-4">
+          <a href="" class="p-3"><i class="fab fa-twitter"></i></a>
+          <a href="" class="p-3"><i class="fab fa-facebook-f"></i></a>
+          <a href="" class="p-3"><i class="fab fa-instagram"></i></a>
+          <a href="" class="p-3"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script src="https://kit.fontawesome.com/9418f17761.js" crossorigin="anonymous"></script>
+  <script>
+    function toggleMenu() {
+      const mobileMenuContent = document.getElementById('mobileMenuContent')
+      if (mobileMenuContent.getAttribute('class') === 'hidden') {
+        mobileMenuContent.setAttribute('class', 'block')
+      } else {
+        mobileMenuContent.setAttribute('class', 'hidden')
+      }
+    }
+  </script>
 
 </body>
+
 </html>
